@@ -1,0 +1,20 @@
+@import '../../../ui_local/ui_local.scss';
+
+.BackgroundPurpleLine {
+  position: relative;display: flex;
+  background: $ui_background_dark;
+  transition: left 1s ease-in-out;
+  min-width: 200vw;
+  .BGTOP{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .BGBOTTOM {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+}

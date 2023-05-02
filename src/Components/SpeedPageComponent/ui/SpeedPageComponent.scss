@@ -1,0 +1,30 @@
+@import '../../../ui_local/ui_local.scss';
+.SpeedPageComponent {
+  background: $ui_background_dark;
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding: 0 100px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  &_infoBlock {
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-content: flex-start;
+    &__h {
+      font-family: $ui_fontF_text;
+      font-size: $ui_fontS_h;
+      color: $ui_colorH;
+    }
+    &__text {
+      font-family: $ui_fontF_text;
+      font-size: $ui_fontS_text;
+      color: $ui_colorText;
+    }
+  }
+}

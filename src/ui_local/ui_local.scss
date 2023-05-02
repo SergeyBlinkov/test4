@@ -1,0 +1,54 @@
+$ui_linearG__PP: linear-gradient(93.71deg, #7A0BC0 13.27%, #FA58B6 101.64%);
+$ui_linearG_hover__PPB: linear-gradient(120.71deg, #7A0BC0 -7.46%, #FA58B6 65.02%, #3858C7 106.98%);
+$ui_background_dark: #252424;
+$ui_colorH : #FFE9F6;
+$ui_colorText: #FFE9F6;
+$ui_background_purple:#7A0BC0;
+$ui_background_blue:#0B8AC0;
+$ui_background_pink:#E105E5;
+$ui_fontF_text: 'Montserrat';
+$ui_fontS_text: 16px;
+$ui_fontS_h: 48px;
+$ui_fontS_button_h: 20px;
+$ui_fontS_button_r: 18px;
+$ui_fontSM__h:36px;
+
+
+
+@mixin regularButton($bg) {
+  width: 136px;
+  height: 38px;
+  border: 1px solid #FFFFFF;
+  font-size: $ui_fontS_button_r;
+  color: #FFFFFF;
+  font-weight: 600;
+  background: transparent;
+  font-family: $ui_fontF_text;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.5s ease-in-out;
+  &:hover {
+    background: $bg;
+    transition: background-color 0.5s ease-in-out;
+  }
+}
+@mixin ButtonH {
+  width: 300px;
+  height: 60px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  color: #fff;
+  background: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+@mixin ButtonH_withBackground {
+  width: 300px;
+  height: 60px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  font-size: $ui_fontS_button_h;
+  font-family: $ui_fontF_text;
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
+}

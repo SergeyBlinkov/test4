@@ -1,0 +1,102 @@
+@import '../../ui_local/ui_local.scss';
+
+@keyframes AnimH  {
+  0% {
+    top: 150px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes AnimText {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 170px;
+  }
+}
+
+
+.GiftComponent {
+  width: 100%;
+  height: 100vh;
+  gap: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+&_infoBlock {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-direction: column;
+  position: relative;
+  background: $ui_background_dark;
+  gap: 50px;
+  &__h {
+    position: absolute;
+    font-size: $ui_fontS_h;
+    top: 80px;
+    opacity: 0;
+    transition: top 0.5s ease-in-out,opacity 0.5s ease-in-out;
+    color:$ui_colorH;
+    z-index: 0;
+  }
+  &__text {
+    top: 140px;
+    transition: top 0.5s ease-in-out,opacity 0.5s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+  font-size: $ui_fontS_text;
+  color: rgb(255, 233, 246);
+}
+  &__button {
+    bottom: 80px;
+    position: absolute;
+    &:hover {
+      .GiftComponent_infoBlock__buttonItem::before {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+      }
+    }
+  }
+  &__buttonItem {
+    @include ButtonH;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "BACK";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.5s ease-in-out;
+      justify-content: center;
+      opacity: 0;
+      background: $ui_linearG__PP;
+    }
+
+  }
+}
+  &_carousel {
+    position: relative;
+  }
+}
+.showInfoBlock {
+  .GiftComponent_infoBlock__h {
+    top:  50px;
+    opacity: 1;
+     transition: top 0.5s ease-in-out,opacity 0.5s ease-in-out;
+  }
+  .GiftComponent_infoBlock__text {
+    top: 170px;
+    opacity: 1;
+    transition: top 0.5s ease-in-out,opacity 0.5s ease-in-out;
+  }
+}

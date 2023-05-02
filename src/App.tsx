@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import SpeedPageComponent from './Components/SpeedPageComponent/ui/SpeedPageComponent';
+import './App.scss';
+import GiftComponent from './Components/GiftComponent/GiftComponent';
+import BackgroundPurpleLine from './shared/ui/BackgroundPurpleLine/BackgroundPurpleLine';
+import './style/media/MediaMobile.css';
+export type TSwipeElement = {
+    onClick: () => {
+        go:() =>void
+        back:() => void
+    }
+}
 function App() {
-  return (
+    const [swipeElement,setSwipeElement] = useState(0)
+    const handleClick = () => {
+            return {
+                go:() =>setSwipeElement(-100),
+                back:() => setSwipeElement(0)
+            }
+    }
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className={'inner'}>
+          <BackgroundPurpleLine left={swipeElement}>
+          <SpeedPageComponent onClick={handleClick}/>
+          <GiftComponent onClick={handleClick}/>
+          </BackgroundPurpleLine>
+      </section>
+
+
     </div>
   );
 }

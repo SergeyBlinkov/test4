@@ -1,0 +1,93 @@
+@media  screen and (max-width: 480px) {
+
+  .SpeedPageComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    height: 100vh;
+    gap: 5%;
+
+    &_infoBlock {
+      width: 100%;
+      padding: 0 15px;
+      .GoButton {
+        position: absolute;
+        bottom: 25px;
+        left: calc(25% - 150px);
+        scale: 0.8;
+      }
+    }
+
+    .BurgerButton {
+      top: 15px;
+      left: 35px;
+    }
+  }
+  .SpeedometerBlock {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: min-content  min-content;
+    gap: 0;
+     width: 100vw;
+     height: auto;
+
+     .Speedometer {
+       margin: -30px auto 0;
+
+       scale: 0.7;
+     }
+   }
+  .ButtonLevelBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+    width: 100%;
+    gap: 0;
+    .ButtonLevelItem {
+      scale: 0.7;
+    }
+  }
+  .SideBar {
+    width: 100vw;
+  }
+  .GiftComponent {
+   display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    grid-gap: 0;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    &_infoBlock {
+      width: 100vw;
+      padding: 10px;
+      position: unset;
+      display: grid;
+      grid-gap: 15px;
+      overflow: visible;
+      &__h {
+        position: unset;
+      }
+    &__text {
+      position: unset;
+    }
+      &__button {
+        position: absolute;
+        bottom: 25px;
+        scale: 0.9;
+        left: calc(50% - 150px);
+      }
+    }
+    &_carousel {
+      margin-top: -140px;
+      scale: 0.6;
+    }
+  }
+}
