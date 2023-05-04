@@ -5,27 +5,28 @@ import Carousel from './Carousel/Carousel';
 const GiftComponent = ({ onClick }:TSwipeElement) => {
     const [showBlock,setShowBlock] = useState(false)
     const GiftComponentRef = useRef<HTMLElement>(null)
-    const ObserverFunction:IntersectionObserverCallback = (entries) => {
-        entries.forEach((entry) => {
-            if(entry.isIntersecting) {
-                if(showBlock) {
-                    return
-                } else {
-                    setShowBlock(true)
-                }
-            } else if (!showBlock) {
-                return
-            } else setShowBlock(false)
-        })
-    }
+
     useEffect(() =>{
+        const ObserverFunction:IntersectionObserverCallback = (entries) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) {
+                    if(showBlock) {
+                        return
+                    } else {
+                        setShowBlock(true)
+                    }
+                } else if (!showBlock) {
+                    return
+                } else setShowBlock(false)
+            })
+        }
         let observer = new IntersectionObserver(ObserverFunction,{rootMargin:'0px',threshold:0.5})
         if(!GiftComponentRef.current) {
             return
         }
 
         observer.observe(GiftComponentRef?.current)
-    },[])
+    },[showBlock])
     return (
         <section className={'GiftComponent'} ref={GiftComponentRef}>
             <section className={`GiftComponent_infoBlock ${showBlock && 'showInfoBlock'}`}>
