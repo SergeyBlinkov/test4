@@ -1,0 +1,109 @@
+@media screen and (max-width: 480px) {
+  .SpeedPageComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 5%;
+  }
+  .SpeedPageComponent_infoBlock {
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+    height: 100vh;
+    width: 100%;
+    top: 90px;
+    margin-top: 20%;
+    left: 0;
+    gap: 20px;
+    padding: 15px;
+  }
+  .SpeedPageComponent_infoBlock .GoButton {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    scale: 0.8;
+    bottom: 5px;
+    left: calc(25% - 148px);
+  }
+  .SpeedPageComponent .BurgerButton {
+    top: 45px;
+    left: 35px;
+  }
+  .SpeedometerBlock {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 260px;
+    gap: 0;
+    top: 40%;
+    justify-items: center;
+    width: 100vw;
+    height: auto;
+  }
+  .SpeedometerBlock .Speedometer {
+    grid-row: 2;
+    padding: 15px;
+    scale: 0.7;
+  }
+  .ButtonLevelBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-row: 1;
+    padding: 15px;
+    gap: 15px;
+    width: 100%;
+  }
+  .ButtonLevelBlock .ButtonLevelItem {
+    width: auto;
+  }
+  .SideBar {
+    top: 0;
+    width: 100vw;
+    height: 100%;
+  }
+  .GiftComponent {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    grid-gap: 0;
+    align-items: stretch;
+    justify-items: center;
+    padding: 10px;
+  }
+  .GiftComponent_infoBlock {
+    width: 100vw;
+    padding: 10px;
+    position: unset;
+    grid-gap: 15px;
+    margin-top: 20%;
+    text-align: center;
+  }
+  .GiftComponent_infoBlock__h {
+    font-size: 27px;
+    position: unset;
+  }
+  .GiftComponent_infoBlock__text {
+    position: unset;
+  }
+  .GiftComponent_infoBlock__button {
+    position: absolute;
+    bottom: 5px;
+    scale: 0.8;
+    left: calc(50% - 150px);
+  }
+  .GiftComponent_carousel {
+    position: absolute;
+    top: 50%;
+    margin-top: -140px;
+    scale: 0.5;
+  }
+}
+
+/*# sourceMappingURL=MediaMobile.css.map */

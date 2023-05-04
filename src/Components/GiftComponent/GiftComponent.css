@@ -1,0 +1,101 @@
+@keyframes AnimH {
+  0% {
+    top: 150px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+@keyframes AnimText {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 170px;
+  }
+}
+.GiftComponent {
+  width: 100%;
+  height: 100vh;
+  gap: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+}
+.GiftComponent_infoBlock {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  flex-direction: column;
+  position: relative;
+  background: #252424;
+  gap: 50px;
+}
+.GiftComponent_infoBlock__h {
+  position: absolute;
+  font-size: 48px;
+  top: 80px;
+  opacity: 0;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color: #FFE9F6;
+  z-index: 0;
+}
+.GiftComponent_infoBlock__text {
+  top: 140px;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  font-size: 16px;
+  color: rgb(255, 233, 246);
+}
+.GiftComponent_infoBlock__button {
+  bottom: 80px;
+  position: absolute;
+}
+.GiftComponent_infoBlock__button:hover .GiftComponent_infoBlock__buttonItem::before {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.GiftComponent_infoBlock__buttonItem {
+  width: 300px;
+  height: 60px;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  color: #fff;
+  background: transparent;
+  transition: background-color 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.GiftComponent_infoBlock__buttonItem::before {
+  content: "BACK";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+  justify-content: center;
+  opacity: 0;
+  background: linear-gradient(93.71deg, #7A0BC0 13.27%, #FA58B6 101.64%);
+}
+.GiftComponent_carousel {
+  position: relative;
+}
+
+.showInfoBlock .GiftComponent_infoBlock__h {
+  top: 50px;
+  opacity: 1;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.showInfoBlock .GiftComponent_infoBlock__text {
+  top: 170px;
+  opacity: 1;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=GiftComponent.css.map */

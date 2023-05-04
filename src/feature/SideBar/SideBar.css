@@ -1,0 +1,95 @@
+.SideBarBlock {
+  position: fixed;
+  display: flex;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+
+.SideBar {
+  width: 375px;
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  color: #FFE9F6;
+  padding: 0 70px;
+  font-size: 24px;
+  background: #000;
+  height: 100%;
+  transition: left 0.5s ease-in-out;
+  z-index: 5;
+  left: -500px;
+}
+.SideBar_nav {
+  display: flex;
+  flex-direction: column;
+}
+.SideBar_nav__item {
+  position: relative;
+}
+.SideBar_nav__item p {
+  padding: 25px 0;
+  display: block;
+  cursor: pointer;
+  transition: rotate 0.5s ease-in-out;
+  transform-origin: 0 50%;
+}
+.SideBar_nav__item span {
+  content: "GO";
+  opacity: 0;
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  bottom: 25px;
+  left: 0;
+  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.SideBar_nav__item:hover p {
+  rotate: -15deg;
+  transition: rotate 0.5s ease-in-out;
+}
+.SideBar_nav__item:hover span {
+  opacity: 1;
+  transition: left 0.5s ease-in-out, opacity 0.8s ease-in-out;
+  left: 50px;
+  bottom: 25px;
+}
+.showSideBar {
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.closeButton {
+  right: 25px;
+  top: 25px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.closeButton::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  rotate: 45deg;
+  top: 13px;
+  border-radius: 25px;
+}
+.closeButton::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 13px;
+  width: 30px;
+  border-radius: 25px;
+  height: 4px;
+  background: #fff;
+  rotate: -45deg;
+}
+
+/*# sourceMappingURL=SideBar.css.map */

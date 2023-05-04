@@ -1,0 +1,72 @@
+.Carousel {
+  width: 494px;
+  height: 523px;
+  display: flex;
+  content: "";
+  overflow: hidden;
+}
+.Carousel_Arrows {
+  bottom: 0;
+  position: absolute;
+  width: 150px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.Carousel_Arrows__right {
+  rotate: 180deg;
+}
+.Carousel_Arrows__right, .Carousel_Arrows__left {
+  cursor: pointer;
+  z-index: 3;
+}
+.Carousel_inner {
+  display: block;
+  position: absolute;
+  width: 494px;
+  z-index: 1;
+  height: 523px;
+  overflow: hidden;
+}
+
+.CarouselItems {
+  display: block;
+  position: relative;
+  width: 1500px;
+  height: 1040px;
+  rotate: 360deg;
+  top: -810px;
+  left: -464px;
+  transition: rotate 0.5s ease-in-out;
+}
+.CarouselItems_item {
+  width: 500px;
+  height: 500px;
+  pointer-events: none;
+}
+.CarouselItems_item img {
+  width: 100%;
+  height: 100%;
+}
+
+.CarouselItems_item1 {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  rotate: 120deg;
+}
+
+.CarouselItems_item2 {
+  position: absolute;
+  bottom: -295px;
+  left: calc(50% - 270px);
+}
+
+.CarouselItems_item3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  rotate: -120deg;
+}
+
+/*# sourceMappingURL=Carousel.css.map */

@@ -1,0 +1,31 @@
+.SpeedPageComponent {
+  background: #252424;
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding: 0 100px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.SpeedPageComponent_infoBlock {
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-content: flex-start;
+}
+.SpeedPageComponent_infoBlock__h {
+  font-family: "Montserrat";
+  font-size: 48px;
+  color: #FFE9F6;
+}
+.SpeedPageComponent_infoBlock__text {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #FFE9F6;
+}
+
+/*# sourceMappingURL=SpeedPageComponent.css.map */
